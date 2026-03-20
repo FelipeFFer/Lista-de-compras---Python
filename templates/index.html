@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Compras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Página de compras usando Python</h1>
+    <div id="shopping-app">
+        <h2>Adicionar Produto</h2>
+        <form method="POST">
+            <input type="text" name="name" placeholder="Nome do produto" required>
+            <input type="number" name="price" placeholder="Preço" step="0.01" required>
+            <input type="number" name="quantity" placeholder="Quantidade" required>
+            <input type="url" name="image" placeholder="URL da imagem">
+            <button type="submit">Adicionar ao Carrinho</button>
+        </form>
+        <h2>Carrinho</h2>
+        <ul id="cart-list">
+            {% for item in cart %}
+            <li>
+                {% if item.image %}
+                <img src="{{ item.image }}" alt="{{ item.name }}" style="max-width:50px; margin-right:10px;">
+                {% endif %}
+                {{ item.name }} - R$ {{ "%.2f"|format(item.price) }} x {{ item.quantity }} = R$ {{ "%.2f"|format(item.price * item.quantity) }}
+                <a href="{{ url_for('remove', index=loop.index0) }}" style="color: #e53e3e; text-decoration: none;">Remover</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <p>Total: R$ {{ "%.2f"|format(total) }}</p>
+    </div>
+    <footer>
+        <p>Supermercado Fernandes</p>
+    </footer>
+</body>
+</html>
