@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #010d41 0%, #0a37ca 100%);
+    background: linear-gradient(135deg, #000000 0%, #a00606 100%);
     color: #ff0b0b;
     margin: 0;
     padding: 20px;
@@ -33,7 +33,7 @@ input {
 button {
     padding: 10px 15px;
     margin: 5px;
-    background: #080f31;
+    background: #500101;
     color: white;
     border: none;
     border-radius: 5px;
@@ -69,6 +69,7 @@ p {
     text-align: center;
 }
 footer {
+    font-size: 500px;
     text-align: center;
     margin-top: 20px;
     color: #e9e9e9;

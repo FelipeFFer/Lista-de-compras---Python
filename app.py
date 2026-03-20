@@ -14,6 +14,7 @@ def index():
         image = request.form.get('image')
         if name and price and quantity:
             try:
+                price = price.replace(',', '.')
                 price = float(price)
                 quantity = int(quantity)
                 if price > 0 and quantity > 0:
