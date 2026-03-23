@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Loja do Flamengo - Python</h1>
+    <h1>Carrinho para compras desenvolvido em Python</h1>
     <div id="shopping-app">
         <h2>Adicionar Produto</h2>
         <form method="POST">
@@ -26,14 +26,14 @@
                 <img src="{{ item.image }}" alt="{{ item.name }}" style="max-width:50px; margin-right:10px;">
                 {% endif %}
                 {{ item.name }} - R$ {{ "%.2f"|format(item.price) }} x {{ item.quantity }} = R$ {{ "%.2f"|format(item.price * item.quantity) }}
-                <a href="{{ url_for('remove', index=loop.index0) }}" style="color: #e53e3e; text-decoration: none;">Remover</a>
+                <a href="{{ url_for('remove', index=loop.index0) }}" style="color: #000000; text-decoration: none;">Remover</a>
             </li>
             {% endfor %}
         </ul>
         <p>Total: R$ {{ "%.2f"|format(total) }}</p>
     </div>
     <footer>
-        <p>FLA STORE
+        <p>Carrinho de Compras desenvolvido por <a href="https://github.com/FelipeFFer" target="_blank">Felipe Frassetto Fernandes</a></p>
     </footer>
 </body>
 </html>

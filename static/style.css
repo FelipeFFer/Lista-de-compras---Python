@@ -1,7 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #000000 0%, #a00606 100%);
-    color: #ff0b0b;
+    background: linear-gradient(135deg, #75a1e4 0%, #187ef2 100%);
+    color: #0c0059;
     margin: 0;
     padding: 20px;
 }
@@ -33,7 +33,7 @@ input {
 button {
     padding: 10px 15px;
     margin: 5px;
-    background: #500101;
+    background: #0c00f1;
     color: white;
     border: none;
     border-radius: 5px;
